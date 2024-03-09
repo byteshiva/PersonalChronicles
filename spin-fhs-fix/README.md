@@ -10,7 +10,7 @@ Fixing Spin to adhere to the Filesystem Hierarchy Standard (FHS).
    { pkgs ? import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/nixos-unstable.tar.gz") {} }:
 
    (pkgs.buildFHSEnv {
-     name = "simple-env";
+     name = "spin-fhs-fix";
      targetPkgs = pkgs: (with pkgs; [vim git nodejs fermyon-spin]);
      runScript = "bash";
    }).env
